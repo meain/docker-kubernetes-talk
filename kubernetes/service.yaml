@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo
+spec:
+  selector:
+    app: demo
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+    name: demo
+  type: LoadBalancer
